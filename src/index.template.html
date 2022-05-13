@@ -96,14 +96,15 @@
       </div>
     </div>
     <!-- DO NOT touch the following DIV -->
-    <div id="q-app"></div>
+    <div>
+      <div id="q-app"></div>
+    </div>
 
     <script>
       const cursor=document.querySelector(".cursor")
     document.addEventListener("mousemove" ,(e)=>{
       let x = e.pageX;
       let y = e.pageY;
-
       cursor.style.top = y + "px";
       cursor.style.left = x + "px";
       cursor.style.display ="block";

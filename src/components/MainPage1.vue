@@ -43,8 +43,90 @@
     </div>
   </div>
 </template>
+<script>
+    const cursor=document.querySelector(".cursor")
+    document.addEventListener("mousemove" ,(e)=>{
+      let x = e.pageX;
+      let y = e.pageY;
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display ="block";
+    })
+
+    document.addEventListener("mouseout" , ()=>{
+      cursor.style.display="none";
+    })
+</script>
 
 <style scoped>
+      .container{
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .cursor{
+        position: fixed ;
+        z-index: 999;
+        background: #2696e8;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: colors 5s infinite;
+        box-shadow: 0  0  2px #2696e8, 0 0 60px #2696e8, 0 0 100px #2696e8 ;
+        transform: translate(-50% , -50%);
+        display: none;
+        display:flex;
+        justify-items: center;
+        align-items: center;
+      }
+      @keyframes colors{
+        0%{
+          filter: hue-rotate(0deg);
+        }
+        100%{
+          filter: hue-rotate(360deg);
+        }
+      }
+      .cursor:before{
+        content: "";
+        position: absolute;
+        background: #2696e8;
+        opacity: 0.2;
+        width: 50px;
+        height: 50px;
+        transform: translate(-30%,-30%);
+        border-radius: 50%;
+      }
+      .in-cursor{
+        border: 5px solid #2696e8;
+        border-radius: 50%;
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        animation: colorss 0.5s infinite;
+
+      }
+      .in-cursor:hover{
+        opacity: 1;
+
+      }
+      @keyframes colorss{
+        0%{
+          filter: hue-rotate(0deg);
+        }
+        100%{
+          width: 100px;
+          height: 100px;
+          transform: translate(-40%,-40%);
+          filter: hue-rotate(360deg);
+        }
+      }
+
+
   .rating-text{
     font-size: 16px;
   }
