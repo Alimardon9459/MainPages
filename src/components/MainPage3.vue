@@ -25,16 +25,18 @@
             </div>
         </div>
         <div class="gg">
-            <div class="content-img-animatsiya" :style="styles">
-            <div :style="styles" class="img-animatsiya-fast q-pa-lg row justify-between">
-                <q-img width="22%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly1.png" alt=""/>
-                <q-img width="22%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly2.png" alt=""/>
+            <div class="content-img-animatsiya row justify-center wrap items-center" :style="styles">
+              <div :style="styles" class="img-animatsiya-fast  row justify-between">
+                  <q-img width="22%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly1.png" alt=""/>
+                  <q-img width="22%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly2.png" alt=""/>
+              </div>
             </div>
-            <div id="slowimg" class="img-animatsiya-slow q-pa-xl row justify-between">
-                <q-img width="20%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly3.png" />
-                <q-img width="20%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly4.png" />
+            <div :style="stylesslow" class="content-img-animatsiya row justify-center wrap items-center">
+              <div  id="slowimg" class="img-animatsiya-slow q-pa-xl row justify-between">
+                  <q-img width="20%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly3.png" />
+                  <q-img width="20%" src="https://rstheme.com/products/wordpress/landing/bizup/assets/images/banner/bnr-ly4.png" />
+              </div>
             </div>
-        </div>
         </div>
     </div>
 </template>
@@ -44,9 +46,10 @@ export default {
     data () {
       return {
         x: 0,
-        
+        y:0,
        
-        viewportWidth: 1
+        viewportWidth: 1,
+        viewportHeight: 1
       }
     },
 
@@ -68,11 +71,23 @@ export default {
       styles () {
         return {
           left: percent(this.x, this.viewportWidth),
+          top: percent(this.y, this.viewportHeight),
           
         }
 
         function percent (value, total) {
           return Math.round((value * 50 / total))-25 + 'px'
+        }
+      },
+       stylesslow () {
+        return {
+          left: percent(this.x, this.viewportWidth),
+          top: percent(this.y, this.viewportHeight),
+          
+        }
+
+        function percent (value, total) {
+          return Math.round((value * 20 / total))-10 + 'px'
         }
       }
     },
@@ -106,18 +121,27 @@ export default {
         border-radius: 0%;
     }
     .gg{
-        top:13%;
+        height: 90vh;
+        top:9%;
         position: absolute;
         width:100%;
         display: flex;
         justify-content:center ;
     }
     .content-img-animatsiya{
-        width: 100%;
+        height: 48%;
+        width: 98%;
         position: absolute;
+        display: flex;
+        justify-content: center;
+        
     }
     .img-animatsiya-slow{
-        padding: 6%;
+        width: 97%;
+        margin-top:300px
+    }
+    .img-animatsiya-fast{
+      width: 95%;
     }
     
 </style>
