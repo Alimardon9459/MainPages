@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-header bordered class="bg-black text-white">
+    <q-header bordered class="bg-black navbar text-white">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
@@ -27,5 +27,7 @@ import { defineComponent } from "@vue/runtime-core";
  </script>
 
 <style scoped>
-
+  .navbar{ 
+    z-index: 99;
+  }
 </style>

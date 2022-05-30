@@ -108,7 +108,7 @@ export default {
         animation-name: elongation;
         animation-duration: 5s;
     }
-    @keyframes elongation{
+    @keyframes elongation{     
         0%{
             width: 0%;
 
