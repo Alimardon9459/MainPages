@@ -20,7 +20,7 @@
             Trusted by beginners, marketers & professionals; Built with usability and performance in mind.
           </div>
           <div class="q-mt-xl">
-            <q-btn class="bg-black text-white q-pa-md " size="16px">Start Building <q-icon class="q-ml-md" name="east" /></q-btn>
+            <q-btn to="/biblo" class="bg-black text-white q-pa-md " size="16px">Start Building <q-icon class="q-ml-md" name="east" /></q-btn>
           </div>
           <div class="q-mt-lg">
             <q-img width="100%" height="9px" src="https://avada.theme-fusion.com/wp-content/uploads/2021/06/small-separator.png" />

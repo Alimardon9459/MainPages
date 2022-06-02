@@ -12,7 +12,7 @@
     >
       <q-carousel-slide :name="1">
         <div class="for-slide for-slide-1 row justify-center items-center ">
-            <div class="w-50f text-white">
+            <div class="w-50f text-white slide-text">
                 <div class="w-100f row justify-center">
                     <q-img width="20%" src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-slider-img-1.png" />
                 </div>
@@ -35,7 +35,7 @@
 
       <q-carousel-slide :name="2">
         <div class="for-slide for-slide-2 row justify-center items-center ">
-            <div class="w-50f text-white">
+            <div class="w-50f text-white slide-text">
                 <div class="w-100f row justify-center">
                     <q-img width="20%" src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-slider-img-1.png" />
                 </div>
@@ -58,7 +58,7 @@
 
       <q-carousel-slide :name="3">
         <div class="for-slide for-slide-3 row justify-center items-center ">
-            <div class="w-50f text-white">
+            <div class="w-50f text-white slide-text">
                 <div class="w-100f row justify-center">
                     <q-img width="20%" src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-slider-img-1.png" />
                 </div>
@@ -72,7 +72,7 @@
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, reiciendis, sed voluptates quo accusamus dolore eius corporis iure sint officiis cumque reprehenderit ducimus voluptate nemo aut dolorum accusantium laboriosam facere.
                 </div>
                 <div class="w-100f row q-mt-lg  justify-center">
-                    <q-btn padding="18px 60px" outline >SHOP HERE </q-btn>
+                    <q-btn padding="18px 60px" outline  >SHOP HERE </q-btn>
                 </div>
 
             </div>
@@ -124,5 +124,19 @@ export default {
     }
     .q-carousel__slide, .q-carousel .q-carousel--padding {
         padding: 0%;
+    }
+    .slide-text{
+        animation-name: botom;
+        animation-duration: 1s; 
+    }
+    @keyframes botom{
+        0%{
+            margin-top: 100px;
+            opacity: 0;
+        }
+        100%{
+            margin-top: opx;
+            opacity: 1;
+        }
     }
 </style>
